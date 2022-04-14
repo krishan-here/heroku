@@ -10,6 +10,8 @@ app.post('/user', (req, res)=>{
     res.send('post works!');
 });
 
-app.listen(3000, ()=> {
-    console.log('server running on 3000');
-})
+let port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+  console.log("server has started!");
+});
